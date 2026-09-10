@@ -1,0 +1,74 @@
+{
+  "name": "@novexel/favicon",
+  "version": "1.0.0",
+  "description": "Production-grade, dynamic multi-theme browser favicon controller, security validator, and identity settings studio by Novexel.",
+  "author": "Novexel Tech Limited",
+  "license": "MIT",
+  "homepage": "https://novexel.co.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novexel/favicon.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "require": "./dist/client/index.js",
+      "types": "./dist/client/index.d.ts"
+    },
+    "./server": {
+      "require": "./dist/server/index.js",
+      "types": "./dist/server/index.d.ts"
+    },
+    "./styles.css": "./src/styles/favicon.css"
+  },
+  "files": [
+    "dist",
+    "src/styles/favicon.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node tests/run-verifier.js",
+    "security-scan": "cve-lite .",
+    "security-fix": "cve-lite . --fix"
+  },
+  "keywords": [
+    "favicon",
+    "theme",
+    "dark-mode",
+    "browser-tab",
+    "badging",
+    "tab-icon",
+    "novexel",
+    "security",
+    "react",
+    "enterprise"
+  ],
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  }
+}

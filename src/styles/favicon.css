@@ -1,0 +1,5 @@
+/* Base styling for browser mockup & favicon preview elements */
+.novexel-favicon-tab {
+  user-select: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
